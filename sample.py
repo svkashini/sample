@@ -1,9 +1,20 @@
 import streamlit as st
 import pandas as pd
+import datetime
 
 st.title('アップされたcsvファイルを３倍にするアプリ')
 
 upload_file = st.file_uploader('csvファイルをアップロードしてください。')
+
+tart_date = st.date_input(
+    '集計開始日を選択（処理に関係ないけどw）',
+    datetime.datetime.today() - datetime.timedelta(days=60)
+)
+
+end_date = st.date_input(
+    '集計終了日を選択（処理に関係ないけどw）',
+    datetime.date.today()
+)
 
 if upload_file is not None:
     df = pd.read_csv(upload_file)
