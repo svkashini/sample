@@ -1,6 +1,6 @@
-import streamlit as st
+import streamlit as st #streamlitは通常stに省略して呼び出すようimportする（公式ドキュメントもそうしてる（
 import pandas as pd
-import datetime
+import datetime #日付データ型を取り扱うときはdatetimeのインポート要
 
 st.title('アップされたcsvファイルを３倍にするアプリ')
 
