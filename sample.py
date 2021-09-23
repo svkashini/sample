@@ -21,7 +21,7 @@ end_date = st.date_input(
 
 if upload_file is not None:#ファイルのアップロードがあった時だけ、以下の処理が実行される
     df = pd.read_csv(upload_file)
-    temp = pd.DataFrame([])
+    temp = pd.DataFrame()
     i = 0 
     while i < 3:
         temp = pd.concat([temp, df], axis=0)#アップロードしたcsvの内容を空のDataFrameへ３回concatして、ファイル長を３倍にしてるだけ
